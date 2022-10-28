@@ -1,4 +1,5 @@
 from tkinter import *
+from Game import Game
 
 
 def auto_lose():
