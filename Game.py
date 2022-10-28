@@ -21,3 +21,27 @@ class Game:
         self.original_towns = self.get_list_of_towns()["towns"]
         self.original_towns = set(self.towns)
         self.original_towns = list(self.towns)
+
+    def check_repeat(self, answer):
+        if answer in self.get_used_towns():
+            print("Такой город уже был!")
+            return False
+        else:
+            return True
+
+    def set_player_win(self):
+        self.player_win = True
+
+    def get_player_win(self):
+        if (self.player_win):
+            return True
+        else:
+            return False
+
+    def check_town(self, answer):
+        if answer in self.get_towns():
+            return True
+        else:
+            print(self.get_towns())
+            print("Такого города не существует")
+            return False
